@@ -4,6 +4,7 @@ import { Barlow_Condensed, Inter } from 'next/font/google';
 import './globals.css';
 import { getKorivaConfig, buildCssVars } from '@/lib/koriva-config';
 
+import { KorivaLivePreview } from '@/components/KorivaLivePreview';
 const barlowCondensed = Barlow_Condensed({ subsets: ['latin'], weight: ['400','600','700','800','900'], variable: '--font-barlow-condensed' });
 const inter = Inter({ subsets: ['latin'], weight: ['400','500','600'], variable: '--font-inter' });
 
@@ -17,7 +18,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const vars = buildCssVars(cfg?.brand);
   return (
     <html lang="en" className={`${barlowCondensed.variable} ${inter.variable}`} style={vars as React.CSSProperties}>
-      <body>{children}</body>
+      <body>{children}<KorivaLivePreview /></body>
     </html>
   );
 }
