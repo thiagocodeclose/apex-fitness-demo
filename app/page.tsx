@@ -81,14 +81,14 @@ function Hero() {
         {/* Gold label */}
         <div className="inline-flex items-center gap-3 mb-8">
           <div className="w-12 h-[2px] bg-[#FFD700]" />
-          <span className="font-body text-[#FFD700] uppercase tracking-[0.3em] text-sm">Houston, TX · Est. 2012</span>
+          <span data-cg-el="hero_eyebrow" className="font-body text-[#FFD700] uppercase tracking-[0.3em] text-sm">Houston, TX · Est. 2012</span>
         </div>
 
         <h1 data-cg-el="hero_headline_1" className="font-heading font-black text-[clamp(3.5rem,10vw,9.5rem)] text-white uppercase leading-none mb-6 gold-text-glow">
           WHERE<br /><span className="text-[#FFD700]">LEGENDS</span><br />ARE BUILT.
         </h1>
 
-        <p className="font-body text-lg text-[#888888] max-w-lg mb-10 leading-relaxed">
+        <p data-cg-el="hero_subtitle" className="font-body text-lg text-[#888888] max-w-lg mb-10 leading-relaxed">
           Houston's premier strength & conditioning facility. Serious equipment, elite coaching, and a culture built on results.
         </p>
 
