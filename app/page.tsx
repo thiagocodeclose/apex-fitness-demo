@@ -36,13 +36,12 @@ function Header() {
   return (
     <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-400 ${scrolled ? 'bg-[#0A0A0A]/96 backdrop-blur border-b border-[#FFD700]/20' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-6 h-18 flex items-center justify-between py-4">
-        <a href="#" className="font-heading font-black text-2xl tracking-widest uppercase">
+        <a href="#" data-cg-el="nav_logo_text"
           <span className="text-[#FFD700]">APEX</span><span className="text-white"> FITNESS</span>
         </a>
         <nav className="hidden md:flex items-center gap-8">
           {links.map(l => <a key={l} href={`#${l.toLowerCase()}`} className="font-body text-sm font-medium text-[#888888] hover:text-white uppercase tracking-wider transition-colors">{l}</a>)}
-          <a href={`${koriva.baseUrl}/book?slug=${koriva.gymSlug}`} className="bg-[#FFD700] hover:bg-[#B8970A] text-[#0A0A0A] font-heading font-black text-sm uppercase tracking-widest px-6 py-2.5 transition-colors">
-            Join Now
+          <a href="#" data-cg-el="hero_cta_primary" text-[#0A0A0A] font-heading font-black text-sm uppercase tracking-widest px-6 py-2.5 transition-colors">Join Now
           </a>
         </nav>
         <button onClick={() => setOpen(!open)} className="md:hidden text-white p-1">{open ? <X size={24} /> : <Menu size={24} />}</button>
@@ -85,7 +84,7 @@ function Hero() {
           <span className="font-body text-[#FFD700] uppercase tracking-[0.3em] text-sm">Houston, TX · Est. 2012</span>
         </div>
 
-        <h1 className="font-heading font-black text-[clamp(3.5rem,10vw,9.5rem)] text-white uppercase leading-none mb-6 gold-text-glow">
+        <h1 data-cg-el="hero_headline_1" className="font-heading font-black text-[clamp(3.5rem,10vw,9.5rem)] text-white uppercase leading-none mb-6 gold-text-glow">
           WHERE<br /><span className="text-[#FFD700]">LEGENDS</span><br />ARE BUILT.
         </h1>
 
