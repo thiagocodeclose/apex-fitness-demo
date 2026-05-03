@@ -41,7 +41,7 @@ function Header() {
         </a>
         <nav className="hidden md:flex items-center gap-8">
           {links.map(l => <a key={l} href={`#${l.toLowerCase()}`} className="font-body text-sm font-medium text-[#888888] hover:text-white uppercase tracking-wider transition-colors">{l}</a>)}
-          <a href="#" data-cg-el="hero_cta_primary" text-[#0A0A0A] font-heading font-black text-sm uppercase tracking-widest px-6 py-2.5 transition-colors">Join Now
+          <a href="#" data-cg-el="hero_cta_primary" className="text-[#0A0A0A] font-heading font-black text-sm uppercase tracking-widest px-6 py-2.5 transition-colors">Join Now
           </a>
         </nav>
         <button onClick={() => setOpen(!open)} className="md:hidden text-white p-1">{open ? <X size={24} /> : <Menu size={24} />}</button>
