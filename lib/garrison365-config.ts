@@ -1,7 +1,7 @@
 // @ts-nocheck
-import { koriva as defaultKoriva } from './site-data';
+import { garrison365 as defaultGarrison365 } from './site-data';
 
-export type KorivaConfig = {
+export type Garrison365Config = {
   gymSlug: string;
   primaryColor?: string;
   accentColor?: string;
@@ -11,7 +11,7 @@ export type KorivaConfig = {
   baseUrl: string;
 };
 
-export function buildCssVars(cfg: KorivaConfig | null): React.CSSProperties {
+export function buildCssVars(cfg: Garrison365Config | null): React.CSSProperties {
   if (!cfg) return {};
   return {
     ...(cfg.primaryColor && { '--gold': cfg.primaryColor }),
@@ -21,11 +21,11 @@ export function buildCssVars(cfg: KorivaConfig | null): React.CSSProperties {
   } as React.CSSProperties;
 }
 
-const GYM_SLUG = defaultKoriva.gymSlug;
+const GYM_SLUG = defaultGarrison365.gymSlug;
 
-export async function getKorivaConfig(): Promise<KorivaConfig | null> {
+export async function getGarrison365Config(): Promise<Garrison365Config | null> {
   try {
-    const res = await fetch(`${defaultKoriva.baseUrl}/api/site-config?slug=${GYM_SLUG}`, { next: { revalidate: 60 } });
+    const res = await fetch(`${defaultGarrison365.baseUrl}/api/site-config?slug=${GYM_SLUG}`, { next: { revalidate: 60 } });
     if (!res.ok) return null;
     return await res.json();
   } catch {

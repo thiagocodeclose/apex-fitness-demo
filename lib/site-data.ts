@@ -124,7 +124,7 @@ export const pricing = [
   },
 ];
 
-export const koriva = {
+export const garrison365 = {
   gymSlug: 'apex-fitness',
   baseUrl: 'https://app.codegyms.com',
 };

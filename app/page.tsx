@@ -4,7 +4,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { Menu, X, ChevronDown, MapPin, Phone, Mail, Clock, Instagram, Youtube, Facebook, Check, Star, ArrowRight } from 'lucide-react';
-import { studio, instructors, stats, classes, testimonials, pricing, koriva } from '@/lib/site-data';
+import { studio, instructors, stats, classes, testimonials, pricing, garrison365 } from '@/lib/site-data';
 
 /* ── reveal ──────────────────────────────────────────────────────────────── */
 function useReveal() {
@@ -49,7 +49,7 @@ function Header() {
       {open && (
         <div className="md:hidden bg-[#141414] border-t border-[#FFD700]/20 px-6 py-4 flex flex-col gap-4">
           {links.map(l => <a key={l} href={`#${l.toLowerCase()}`} onClick={() => setOpen(false)} className="font-body text-sm uppercase tracking-wider text-[#888888] hover:text-white transition-colors">{l}</a>)}
-          <a href={`${koriva.baseUrl}/book?slug=${koriva.gymSlug}`} className="bg-[#FFD700] text-[#0A0A0A] font-heading font-black text-sm uppercase tracking-widest px-5 py-3 text-center">Join Now</a>
+          <a href={`${garrison365.baseUrl}/book?slug=${garrison365.gymSlug}`} className="bg-[#FFD700] text-[#0A0A0A] font-heading font-black text-sm uppercase tracking-widest px-5 py-3 text-center">Join Now</a>
         </div>
       )}
     </header>
@@ -93,7 +93,7 @@ function Hero() {
         </p>
 
         <div className="flex flex-wrap gap-4">
-          <a href={`${koriva.baseUrl}/book?slug=${koriva.gymSlug}`} className="bg-[#FFD700] hover:bg-[#B8970A] text-[#0A0A0A] font-heading font-black text-lg uppercase tracking-widest px-10 py-4 transition-colors inline-flex items-center gap-3">
+          <a href={`${garrison365.baseUrl}/book?slug=${garrison365.gymSlug}`} className="bg-[#FFD700] hover:bg-[#B8970A] text-[#0A0A0A] font-heading font-black text-lg uppercase tracking-widest px-10 py-4 transition-colors inline-flex items-center gap-3">
             Start For Free <ArrowRight size={18} />
           </a>
           <a href="#classes" className="border border-white/20 hover:border-[#FFD700]/60 text-white font-heading font-bold text-lg uppercase tracking-wider px-10 py-4 transition-colors">
@@ -218,7 +218,7 @@ function Classes() {
         </div>
         <Reveal delay={200}>
           <div className="mt-12 text-center">
-            <a href={`${koriva.baseUrl}/schedule?slug=${koriva.gymSlug}`} className="inline-flex items-center gap-3 border border-[#FFD700]/40 text-[#FFD700] hover:bg-[#FFD700] hover:text-[#0A0A0A] font-heading font-black text-base uppercase tracking-widest px-10 py-4 transition-colors">
+            <a href={`${garrison365.baseUrl}/schedule?slug=${garrison365.gymSlug}`} className="inline-flex items-center gap-3 border border-[#FFD700]/40 text-[#FFD700] hover:bg-[#FFD700] hover:text-[#0A0A0A] font-heading font-black text-base uppercase tracking-widest px-10 py-4 transition-colors">
               View Full Schedule <ArrowRight size={16} />
             </a>
           </div>
@@ -321,7 +321,7 @@ function Pricing() {
                     </li>
                   ))}
                 </ul>
-                <a href={`${koriva.baseUrl}/book?slug=${koriva.gymSlug}`}
+                <a href={`${garrison365.baseUrl}/book?slug=${garrison365.gymSlug}`}
                   className={`font-heading font-black text-base uppercase tracking-widest px-6 py-4 text-center transition-colors ${p.highlight ? 'bg-[#0A0A0A] hover:bg-[#141414] text-[#FFD700]' : 'border border-[#FFD700]/40 text-[#FFD700] hover:bg-[#FFD700] hover:text-[#0A0A0A]'}`}>
                   {p.cta}
                 </a>
@@ -348,7 +348,7 @@ function Footer() {
             Your Legend<br /><span className="text-[#FFD700]">Starts Today.</span>
           </h2>
           <p className="font-body text-[#888888] mb-8 max-w-md mx-auto">First class is on us. Come see why 1,200+ members call Apex their home gym.</p>
-          <a href={`${koriva.baseUrl}/book?slug=${koriva.gymSlug}`} className="inline-flex items-center gap-3 bg-[#FFD700] hover:bg-[#B8970A] text-[#0A0A0A] font-heading font-black text-xl uppercase tracking-widest px-12 py-5 transition-colors">
+          <a href={`${garrison365.baseUrl}/book?slug=${garrison365.gymSlug}`} className="inline-flex items-center gap-3 bg-[#FFD700] hover:bg-[#B8970A] text-[#0A0A0A] font-heading font-black text-xl uppercase tracking-widest px-12 py-5 transition-colors">
             Claim Free Class <ArrowRight size={20} />
           </a>
         </Reveal>
@@ -382,7 +382,7 @@ function Footer() {
         </div>
       </div>
       <div className="border-t border-[#FFD700]/10 py-6 text-center">
-        <p className="font-body text-xs text-[#888888]">© 2026 Apex Fitness. Powered by <span className="text-[#FFD700]">Koriva</span>.</p>
+        <p className="font-body text-xs text-[#888888]">© 2026 Apex Fitness. Powered by <span className="text-[#FFD700]">Garrison365</span>.</p>
       </div>
     </footer>
   );
